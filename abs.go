@@ -18,39 +18,39 @@ func SignAbsf(n float64) (float64, float64) {
 		return 0, 0
 	}
 }
-func Signi(n int) (int, int) {
+func Signi(n int) int {
 	if n > 0 {
-		return 1, n
+		return 1
 	} else if n < 0 {
-		return -1, -n
+		return -1
 	} else {
-		return 0, 0
+		return 0
 	}
 }
-func Signf(n float64) (float64, float64) {
+func Signf(n float64) float64 {
 	if n > 0 {
-		return 1, n
+		return 1
 	} else if n < 0 {
-		return -1, -n
+		return -1
 	} else {
-		return 0, 0
+		return 0
 	}
 }
-func Absi(n int) (int, int) {
+func Absi(n int) int {
 	if n > 0 {
-		return 1, n
+		return n
 	} else if n < 0 {
-		return -1, -n
+		return -n
 	} else {
-		return 0, 0
+		return 0
 	}
 }
-func Absf(n float64) (float64, float64) {
+func Absf(n float64) float64 {
 	if n > 0 {
-		return 1, n
+		return n
 	} else if n < 0 {
-		return -1, -n
+		return -n
 	} else {
-		return 0, 0
+		return 0
 	}
 }
