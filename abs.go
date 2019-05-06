@@ -1,4 +1,4 @@
-// Copyright 2015 SeukWon Kang (kasworld@gmail.com)
+// Copyright 2015,2016,2017,2018,2019 SeukWon Kang (kasworld@gmail.com)
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -10,6 +10,8 @@
 // limitations under the License.
 
 package abs
+
+import "math"
 
 func SignAbsi(n int) (int, int) {
 	if n > 0 {
@@ -64,4 +66,18 @@ func Absf(n float64) float64 {
 	} else {
 		return 0
 	}
+}
+
+func Lenf(x1, y1, x2, y2 float64) float64 {
+	xl := x1 - x2
+	yl := y1 - y2
+	r := math.Sqrt(xl*xl + yl*yl)
+	return r
+}
+
+func FloatEqual(a, b float64) bool {
+	absGap := math.Abs(a - b)
+	pow := math.Pow10(-5)
+
+	return pow > absGap
 }
